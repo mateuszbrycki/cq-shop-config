@@ -14,7 +14,7 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://${CONF_EUREKA_HOST:127.0.0.1}:${CONF_EUREKA_PORT:8762}/eureka
+      defaultZone: http://${CONF_EUREKA_HOST:127.0.0.1}:${CONF_EUREKA_PORT:8761}/eureka
 
 spring:
   cloud:
