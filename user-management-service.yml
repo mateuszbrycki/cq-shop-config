@@ -8,7 +8,7 @@ logging:
   level:
       org:
         springframework:
-          web: ERROR
+          web: DEBUG
         hibernate: DEBUG
 
 eureka:
@@ -32,9 +32,9 @@ spring:
         binder:
           brokers: localhost:9092
       bindings:
-        events-in:
-          destination: events
+        user-management-events-in:
+          destination: user-management-events
           contentType: application/json
-        events-out:
-          destination: events
+        user-management-events-out:
+          destination: user-management-events
           contentType: application/json
