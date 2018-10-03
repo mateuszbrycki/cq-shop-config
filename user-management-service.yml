@@ -6,10 +6,10 @@ logging:
   file: ${spring.application.name}.log
   path: ../
   level:
-      org:
-        springframework:
-          web: DEBUG
-        hibernate: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: DEBUG
 
 eureka:
   client:
@@ -24,7 +24,7 @@ spring:
     password: admin
   h2:
     console:
-      path: /h2-console
+    path: /h2-console
       enabled: true
   cloud:
     stream:
