@@ -15,14 +15,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://${CONF_EUREKA_HOST:127.0.0.1}:${CONF_EUREKA_PORT:8761}/eureka
-      
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 
 spring:
+  devtools:
+    restart:
+      enabled: true
   datasource:
     url: jdbc:h2:mem:user-management;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
