@@ -43,3 +43,6 @@ kafka:
     servers: localhost:9092
 user-management-service:
   topic: user-management-service-topic
+  
+cq-common:
+  application-command-topic: application-command-topic
