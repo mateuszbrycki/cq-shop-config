@@ -38,7 +38,9 @@ spring:
     consumer:
       group-id: cq-shop
       auto-offset-reset: earliest
-
+kafka:
+  bootstrap:
+    servers: localhost:9092
 user-management-service:
   topic:
     in: user-management-service-topic-in
