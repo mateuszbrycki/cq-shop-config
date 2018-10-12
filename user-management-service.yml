@@ -42,6 +42,4 @@ kafka:
   bootstrap:
     servers: localhost:9092
 user-management-service:
-  topic:
-    in: user-management-service-topic-in
-    out: user-management-service-topic-out
+  topic: user-management-service-topic
