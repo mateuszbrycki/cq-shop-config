@@ -56,7 +56,7 @@ spring:
         endpoint: http://localhost:8081
       schema:
         avro:
-          schema-locations: classpath:avro/UserCreatedEvent.avsc
+          schema-locations: classpath:schemas/UserCreatedEvent.avsc
 
   kafka:
     consumer:
