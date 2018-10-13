@@ -46,6 +46,12 @@ spring:
         user-management-events-out:
           destination: user-management-events
           contentType: application/json
+      schemaRegistryClient:
+        endpoint: http://localhost:8081
+      schema:
+        avro:
+          schema-locations: classpath:avro/sensor.avsc
+
   kafka:
     consumer:
       group-id: cq-shop
