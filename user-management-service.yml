@@ -40,6 +40,12 @@ spring:
         binder:
           brokers: localhost:9092
       bindings:
+        output:
+          contentType: application/*+avro
+          destination: user-management-events
+        input:
+          contentType: application/*+avro
+          destination: user-management-events
         user-management-events-in:
           destination: user-management-events
           contentType: application/json
