@@ -50,7 +50,7 @@ spring:
         endpoint: http://localhost:8081
       schema:
         avro:
-          schema-locations: classpath:avro/sensor.avsc
+          schema-locations: classpath:avro/UserCreatedEvent.avsc
 
   kafka:
     consumer:
