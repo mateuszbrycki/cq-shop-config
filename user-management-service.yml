@@ -34,6 +34,18 @@ spring:
   h2:
     console:
       enabled: true
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        user-management-events-in:
+          destination: user-management-events
+          contentType: application/json
+        user-management-events-out:
+          destination: user-management-events
+          contentType: application/json
   kafka:
     consumer:
       group-id: cq-shop
@@ -41,8 +53,5 @@ spring:
 kafka:
   bootstrap:
     servers: localhost:9092
-user-management-service:
-  topic: user-management-service-topic
-  
 cq-common:
   application-command-topic: application-command-topic
