@@ -48,10 +48,10 @@ spring:
           destination: user-management-events
         user-management-events-in:
           destination: user-management-events
-          contentType: application/json
+          contentType: application/*+avro
         user-management-events-out:
           destination: user-management-events
-          contentType: application/json
+          contentType: application/*+avro
       schemaRegistryClient:
         endpoint: http://localhost:8081
       schema:
