@@ -1,6 +1,6 @@
 server:
   address: localhost
-  port: 8088
+  port: 8089
 
 logging:
   file: ${spring.application.name}.log
