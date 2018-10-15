@@ -53,7 +53,7 @@ spring:
           destination: user-management-events
           contentType: application/*+avro
       schemaRegistryClient:
-        endpoint: http://localhost:8089
+        endpoint: http://localhost:8990
       schema:
         avro:
           schema-locations: classpath:schemas/UserCreatedEvent.avsc
