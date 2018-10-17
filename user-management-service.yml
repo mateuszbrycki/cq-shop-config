@@ -1,6 +1,6 @@
 server:
   address: localhost
-  port: 8091
+  port: 8081
 
 logging:
   file: ${spring.application.name}.log
@@ -40,10 +40,10 @@ spring:
         binder:
           brokers: localhost:9092
       bindings:
-        output:
+        user-management-events:
           contentType: application/*+avro
           destination: user-management-events
-        input:
+        user-management-events:
           contentType: application/*+avro
           destination: user-management-events
         user-management-events-in:
