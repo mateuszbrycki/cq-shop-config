@@ -32,8 +32,10 @@ spring:
       auto-offset-reset: earliest
   cloud:
     stream:
+      schemaRegistryClient:
+        endpoint: http://localhost:8990
       default:
-        contentType: application/*+avro
+        contentType: applica
 kafka:
   bootstrap:
     servers: localhost:9092
