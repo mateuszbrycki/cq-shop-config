@@ -43,9 +43,6 @@ spring:
         user-management-events:
           contentType: application/*+avro
           destination: user-management-events
-        user-management-events:
-          contentType: application/*+avro
-          destination: user-management-events
         user-management-events-in:
           destination: user-management-events
           contentType: application/*+avro
