@@ -38,7 +38,7 @@ spring:
       default:
         contentType: application/*+avro
         destination: user-management-events
-      sbindings:
+      bindings:
         user-management-events:
           destination: user-management-events
         user-management-events-in:
