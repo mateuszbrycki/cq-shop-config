@@ -33,6 +33,9 @@ spring:
     stream:
       schemaRegistryClient:
         endpoint: http://localhost:8990
+      schema:
+        avro:
+          schema-locations: classpath:schemas/UserCreatedEvent.avsc
       default:
         contentType: applica
 kafka:
