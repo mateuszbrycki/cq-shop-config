@@ -3,7 +3,6 @@ server:
   port: 8081
 
 logging:
-  file: ${spring.application.name}.log
   path: ../
   level:
     org:
