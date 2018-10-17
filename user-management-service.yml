@@ -3,7 +3,6 @@ server:
   port: 8081
 
 logging:
-  file: ${spring.application.name}.log
   path: ../
   level:
     org:
@@ -36,14 +35,11 @@ spring:
       enabled: true
   cloud:
     stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
+      default:
+        contentType: application/*+avro
+        destination: user-management-events
       bindings:
-        output:
-          contentType: application/*+avro
-          destination: user-management-events
-        input:
+        user-management-events:
           contentType: application/*+avro
           destination: user-management-events
         user-management-events-in:
@@ -52,6 +48,9 @@ spring:
         user-management-events-out:
           destination: user-management-events
           contentType: application/*+avro
+      kafka:
+        binder:
+          brokers: localhost:9092
       schemaRegistryClient:
         endpoint: http://localhost:8990
       schema:
