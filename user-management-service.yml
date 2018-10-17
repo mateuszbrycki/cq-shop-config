@@ -40,11 +40,14 @@ spring:
         destination: user-management-events
       bindings:
         user-management-events:
+          contentType: application/*+avro
           destination: user-management-events
         user-management-events-in:
           destination: user-management-events
+          contentType: application/*+avro
         user-management-events-out:
           destination: user-management-events
+          contentType: application/*+avro
       kafka:
         binder:
           brokers: localhost:9092
