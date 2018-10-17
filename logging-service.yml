@@ -30,6 +30,10 @@ spring:
     consumer:
       group-id: cq-shop
       auto-offset-reset: earliest
+  cloud:
+    stream:
+      default:
+        contentType: application/*+avro
 kafka:
   bootstrap:
     servers: localhost:9092
