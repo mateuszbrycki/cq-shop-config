@@ -38,12 +38,12 @@ spring:
           schema-locations: classpath:schemas/UserCreatedEvent.avsc
       default:
         contentType: application/*+avro
-        user-management-events-in:
-          destination: user-management-events
-          contentType: application/*+avro
-        user-management-events-out:
-          destination: user-management-events
-          contentType: application/*+avro
+      user-management-events-in:
+        destination: user-management-events
+        contentType: application/*+avro
+      user-management-events-out:
+        destination: user-management-events
+        contentType: application/*+avro
 kafka:
   bootstrap:
     servers: localhost:9092
