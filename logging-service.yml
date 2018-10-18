@@ -35,12 +35,15 @@ spring:
         endpoint: http://localhost:8990
       default:
         contentType: application/*+avro
+      user-management-events-in:
+        destination: user-management-events
+        contentType: application/*+avro
+      user-management-events-out:
+        destination: user-management-events
+        contentType: application/*+avro
       kafka:
         binder:
           brokers: localhost:9092
-      schema:
-        avro:
-          schema-locations: classpath:schemas/userManagementEvents.avsc
 kafka:
   bootstrap:
     servers: localhost:9092
