@@ -45,7 +45,7 @@ spring:
         endpoint: http://localhost:8990
       schema:
         avro:
-          schema-locations: classpath:schemas/userManagementEvents.avsc
+          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
       group-id: cq-shop

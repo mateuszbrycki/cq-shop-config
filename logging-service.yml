@@ -35,7 +35,7 @@ spring:
         endpoint: http://localhost:8990
       schema:
         avro:
-          schema-locations: classpath:schemas/userManagementEvents.avscs
+          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
       default:
         contentType: application/*+avro
       user-management-events-in:
