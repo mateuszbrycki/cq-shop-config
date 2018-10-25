@@ -25,6 +25,19 @@ spring:
   devtools:
     restart:
       enabled: true
+  cloud:
+    stream:
+      default:
+        contentType: application/*+avro
+        destination: user-management-events
+      kafka:
+        binder:
+          brokers: localhost:9092
+      schemaRegistryClient:
+        endpoint: http://localhost:8990
+      schema:
+        avro:
+          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
       group-id: cq-shop
@@ -34,6 +47,3 @@ kafka:
     servers: localhost:9092
 cq-common:
   application-command-topic: application-command-topic
-logging-service:
-  schemaRegistryClient:
-    endpoint: http://localhost:8990
