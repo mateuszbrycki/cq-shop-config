@@ -40,7 +40,7 @@ spring:
         destination: user-management-events
       kafka:
         binder:
-          brokers: 108.59.87.152:9092
+          brokers: localhost:9092
       schemaRegistryClient:
         endpoint: http://localhost:8990
       schema:
@@ -52,6 +52,6 @@ spring:
       auto-offset-reset: earliest
 kafka:
   bootstrap:
-    servers: 108.59.87.152:9092
+    servers: localhost:9092
 cq-common:
   application-command-topic: application-command-topic
