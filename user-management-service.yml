@@ -48,7 +48,7 @@ spring:
           schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
-      group-id: cq-shop
+      group-id: user-management-group
       auto-offset-reset: earliest
 kafka:
   bootstrap:
