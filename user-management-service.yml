@@ -52,6 +52,6 @@ spring:
       auto-offset-reset: earliest
 kafka:
   bootstrap:
-    servers: localhost:9092
+    servers: 108.59.87.152:9092
 cq-common:
   application-command-topic: application-command-topic
