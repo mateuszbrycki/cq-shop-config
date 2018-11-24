@@ -1,6 +1,6 @@
 server:
   address: localhost
-  port: 8099
+  port: 8082
 
 logging:
   path: ../
