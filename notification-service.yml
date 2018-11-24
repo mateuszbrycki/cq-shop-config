@@ -34,7 +34,7 @@ spring:
         endpoint: http://localhost:8990
   kafka:
     consumer:
-      group-id: logging-group
+      group-id: notification-group
       auto-offset-reset: earliest
 kafka:
   bootstrap:
