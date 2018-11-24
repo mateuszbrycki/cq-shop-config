@@ -27,6 +27,8 @@ spring:
       enabled: true
   cloud:
     stream:
+      default:
+        contentType: application/*+avro
       kafka:
         binder:
           brokers: localhost:9092
