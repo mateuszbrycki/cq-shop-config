@@ -29,7 +29,6 @@ spring:
     stream:
       default:
         contentType: application/*+avro
-        destination: notification-service-events
       kafka:
         binder:
           brokers: localhost:9092
