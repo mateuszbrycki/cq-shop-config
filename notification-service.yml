@@ -29,11 +29,15 @@ spring:
     stream:
       default:
         contentType: application/*+avro
+        destination: notification-service-events
       kafka:
         binder:
           brokers: localhost:9092
       schemaRegistryClient:
         endpoint: http://localhost:8990
+      schema:
+        avro:
+          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
       group-id: notification-group
