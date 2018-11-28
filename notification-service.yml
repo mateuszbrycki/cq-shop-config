@@ -29,6 +29,13 @@ spring:
     stream:
       default:
         contentType: application/*+avro
+      bindings:
+        notification-service-events-in:
+          destination: notification-service-events
+        notification-service-events-out:
+          destination: notification-service-events
+        user-management-events-in:
+          destination: user-management-events
       kafka:
         binder:
           brokers: localhost:9092
