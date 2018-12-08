@@ -52,12 +52,14 @@ spring:
         avro:
           schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
+    producer:
+      properties:
+        value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
     consumer:
       group-id: user-management-group
       auto-offset-reset: earliest
 kafka:
   bootstrap:
     servers: localhost:9092
-  value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
 cq-common:
   application-command-topic: application-command-topic
