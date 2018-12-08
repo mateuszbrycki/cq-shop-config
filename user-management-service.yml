@@ -58,5 +58,6 @@ spring:
 kafka:
   bootstrap:
     servers: localhost:9092
+  value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
 cq-common:
   application-command-topic: application-command-topic
