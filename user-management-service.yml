@@ -49,12 +49,9 @@ spring:
           configuration:
             key.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
             value.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
-            schema.registry.url: http://localhost:8990
+            schema.registry.url: 'http://localhost:8990'
       schemaRegistryClient:
         endpoint: http://localhost:8990
-      schema:
-        avro:
-          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
       group-id: user-management-group
