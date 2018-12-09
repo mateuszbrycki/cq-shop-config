@@ -49,13 +49,16 @@ spring:
           configuration:
             key.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
             value.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
-            schema.registry.url: 'http://localhost:8990'
       schemaRegistryClient:
         endpoint: http://localhost:8990
   kafka:
     consumer:
       group-id: user-management-group
       auto-offset-reset: earliest
+
+spring.cloud.stream.kafka.streams.binder.configuration:
+  schema.registry.url: http://localhost:8081
+
 kafka:
   bootstrap:
     servers: localhost:9092
