@@ -46,9 +46,6 @@ spring:
       kafka:
         binder:
           brokers: localhost:9092
-          configuration:
-            key.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
-            value.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
       schemaRegistryClient:
         endpoint: http://localhost:8990
   kafka:
