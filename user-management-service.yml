@@ -46,15 +46,14 @@ spring:
       kafka:
         binder:
           brokers: localhost:9092
+          configuration:
+            value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
       schemaRegistryClient:
         endpoint: http://localhost:8990
       schema:
         avro:
           schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
-    producer:
-      properties:
-        value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
     consumer:
       group-id: user-management-group
       auto-offset-reset: earliest
