@@ -49,6 +49,7 @@ spring:
           configuration:
             key.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
             value.serializer: com.cqshop.usermanagement.config.serializer.KafkaAvroSerializerWithSchemaName
+            schema.registry.url: http://localhost:8990
       schemaRegistryClient:
         endpoint: http://localhost:8990
       schema:
