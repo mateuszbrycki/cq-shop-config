@@ -25,3 +25,5 @@ kafka:
     servers: localhost:9092
 cq-common:
   application-command-topic: application-command-topic
+
+hystrix.command.default.execution.timeout.enabled: false
