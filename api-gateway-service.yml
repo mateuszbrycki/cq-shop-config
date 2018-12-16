@@ -25,3 +25,5 @@ cq-common:
   application-command-topic: application-command-topic
 
 hystrix.command.default.execution.timeout.enabled: false
+feign.client.config.default.connectTimeout: 160000000
+feign.client.config.default.readTimeout: 160000000
