@@ -1,0 +1,27 @@
+server:
+  address: localhost
+  port: 8082
+
+logging:
+  path: ../
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      hibernate: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${CONF_EUREKA_HOST:127.0.0.1}:${CONF_EUREKA_PORT:8761}/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+kafka:
+  bootstrap:
+    servers: localhost:9092
+cq-common:
+  application-command-topic: application-command-topic
