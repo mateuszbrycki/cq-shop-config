@@ -30,7 +30,9 @@ spring:
       bindings:
         user-management-events-in:
           destination: user-management-events
-        cart-service-events-in:
+        cart-events-in:
+          destination: cart-service-events
+        cart-events-out:
           destination: cart-service-events
       kafka:
         binder:
