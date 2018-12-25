@@ -28,6 +28,8 @@ spring:
       default:
         contentType: application/*+avro
       bindings:
+        user-management-events-in:
+          destination: user-management-events
         cart-service-events-in:
           destination: cart-service-events
       kafka:
