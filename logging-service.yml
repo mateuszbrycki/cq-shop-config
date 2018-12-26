@@ -28,6 +28,8 @@ spring:
       default:
         contentType: application/*+avro
       bindings:
+        warehouse-events-in:
+          destination: warehouse-service-events
         cart-events-in:
           destination: cart-service-events
         notification-service-events-in:
