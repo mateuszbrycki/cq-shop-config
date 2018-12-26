@@ -1,0 +1,56 @@
+server:
+  address: localhost
+  port: 8084
+
+logging:
+  level:
+    org:
+      springframework.web: DEBUG
+      hibernate: ERROR
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${CONF_EUREKA_HOST:127.0.0.1}:${CONF_EUREKA_PORT:8761}/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:warehouse;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: admin
+  h2.console.enabled: true
+  devtools:
+    restart:
+      enabled: true
+  cloud:
+    stream:
+      default:
+        contentType: application/*+avro
+      bindings:
+        user-management-events-in:
+          destination: user-management-events
+        warehouse-events-in:
+          destination: warehouse-service-events
+        warehouse-events-out:
+          destination: warehouse-service-events
+      kafka:
+        binder:
+          brokers: localhost:9092
+      schemaRegistryClient:
+        endpoint: http://localhost:8990
+  kafka:
+    consumer:
+      group-id: warehouse-group
+      auto-offset-reset: earliest
+kafka:
+  bootstrap:
+    servers: localhost:9092
+cq-common:
+  application-command-topic: application-command-topic
