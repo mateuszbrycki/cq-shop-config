@@ -34,8 +34,6 @@ spring:
       default:
         contentType: application/*+avro
       bindings:
-        user-management-events-in:
-          destination: user-management-events
         warehouse-events-in:
           destination: warehouse-service-events
         warehouse-events-out:

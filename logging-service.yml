@@ -41,9 +41,6 @@ spring:
           brokers: localhost:9092
       schemaRegistryClient:
         endpoint: http://localhost:8990
-      schema:
-        avro:
-          schema-locations: classpath:schemas/userManagementEvents.avsc,classpath:schemas/registerAccountCommand.avsc
   kafka:
     consumer:
       group-id: logging-group
