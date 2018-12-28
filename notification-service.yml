@@ -28,6 +28,8 @@ spring:
       default:
         contentType: application/*+avro
       bindings:
+        order-events-in:
+          destination: order-service-events
         notification-service-events-in:
           destination: notification-service-events
         notification-service-events-out:
