@@ -40,15 +40,15 @@ spring:
           destination: user-management-events
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: ${CONF_KAFKA_HOST:localhost}:${CONF_KAFKA_PORT:9092}
       schemaRegistryClient:
-        endpoint: http://localhost:8990
+        endpoint: http://${CONF_SCHEMA_REGISTRY_HOST:localhost}:${CONF_SCHEMA_REGISTRY_PORT:8990}
   kafka:
     consumer:
       group-id: logging-group
       auto-offset-reset: earliest
 kafka:
   bootstrap:
-    servers: localhost:9092
+    servers: ${CONF_KAFKA_HOST:localhost}:${CONF_KAFKA_PORT:9092}
 cq-common:
   application-command-topic: application-command-topic

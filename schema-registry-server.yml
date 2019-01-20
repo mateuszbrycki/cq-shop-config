@@ -29,7 +29,7 @@ spring:
       auto-offset-reset: earliest
 kafka:
   bootstrap:
-    servers: localhost:9092
+    servers: ${CONF_KAFKA_HOST:localhost}:${CONF_KAFKA_PORT:9092}
 
 cq-common:
   application-command-topic: application-command-topic
