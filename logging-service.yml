@@ -3,8 +3,7 @@ server:
   port: 8099
 
 logging:
-  path: ../logs/
-  file: logging-service.log
+  file: ../logs/logging-service.log
   level:
     org:
       springframework.web: INFO
