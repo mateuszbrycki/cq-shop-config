@@ -3,7 +3,8 @@ server:
   port: 8099
 
 logging:
-  path: ../logs/evens-stream.log
+  path: ../logs/
+  file: logging-service.log
   level:
     org:
       springframework.web: INFO
