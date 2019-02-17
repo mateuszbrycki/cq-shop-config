@@ -27,3 +27,30 @@ cq-common:
 hystrix.command.default.execution.timeout.enabled: false
 feign.client.config.default.connectTimeout: 160000000
 feign.client.config.default.readTimeout: 160000000
+
+zuul:
+  routes:
+    user-management-service_user:
+      path: /user/**
+      serviceId: user-management-service
+      strip-prefix: false
+    user-management-service_users:
+      path: /users
+      serviceId: user-management-service
+      strip-prefix: false
+    cart-service:
+      path: /cart/**
+      serviceId: cart-service
+      strip-prefix: false
+    order-service:
+      path: /order/**
+      serviceId: order-service
+      strip-prefix: false
+    warehouse-service_product:
+      path: /product/**
+      serviceId: warehouse-service
+      strip-prefix: false
+    warehouse-service_product_products:
+      path: /products
+      serviceId: warehouse-service
+      strip-prefix: false
